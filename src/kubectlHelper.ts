@@ -142,9 +142,7 @@ export async function installOrUpdateKubectl() {
     fs.rmSync(kubectlDownloadPath)
     core.info(
         'install or update new kubect version : ' +
-            (await utils.execCommand(
-                'which kubectl && kubectl version'
-            ))
+            (await utils.execCommand('which kubectl && kubectl version'))
     )
 }
 
